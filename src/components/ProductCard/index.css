@@ -15,6 +15,11 @@
     width: 300px;
   }
 }
+.link-item {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
 
 .thumbnail {
   width: 100%;
