@@ -1,5 +1,5 @@
 import './index.css'
-
+import {Link} from "react-router-dom"
 const ProductCard = props => {
   const {productData} = props
   const {title, brand, imageUrl, rating, price} = productData
@@ -7,7 +7,8 @@ const ProductCard = props => {
   return (
     //   Wrap with Link from react-router-dom
     <li className="product-item">
-      <img src={imageUrl} alt="product" className="thumbnail" />
+      <Link to={`/products/${id}`} className="link-item">
+          <img src={imageUrl} alt="product" className="thumbnail" />
       <h1 className="title">{title}</h1>
       <p className="brand">by {brand}</p>
       <div className="product-details">
@@ -21,6 +22,7 @@ const ProductCard = props => {
           />
         </div>
       </div>
+      </Link>
     </li>
   )
 }
